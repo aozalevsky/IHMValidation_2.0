@@ -1,1 +1,9 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+
+# Docs
+docs/build
+
+# Dependencies
 docker/*.deb
