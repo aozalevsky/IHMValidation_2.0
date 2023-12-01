@@ -42,4 +42,4 @@ ADD "https://api.github.com/repos/salilab/IHMValidation/commits?per_page=1" late
 RUN git clone --depth 1 https://github.com/salilab/IHMValidation.git /opt/IHMValidation
 
 # Create input and output dirs
-RUN mkdir /input /output /cache /databases
+RUN mkdir -p /ihmv/input /ihmv/output /ihmv/cache /ihmv/databases
