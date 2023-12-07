@@ -279,7 +279,7 @@ class WriteReport(object):
                                                 'Validation', 'results', str(Template_Dict['ID'])+'exv.txt'))
             if os.path.exists(file) and not self.nocache:
                 logging.info("Excluded volume file already exists...")
-                with open(file, 'r+') as inf:
+                with open(file, 'r') as inf:
                     line = [ln.strip().replace('[', '').replace(']', '').replace('"', '').
                             replace(' ', '').split(',')[1:] for ln in inf.readlines()]
                 exv_data = {

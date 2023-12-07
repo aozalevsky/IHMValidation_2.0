@@ -184,7 +184,7 @@ class GetMolprobityInformation(GetInputInformation):
                 stdout=f,
                 cwd=self.cache)
 
-        with open(f_name, 'r+') as f:
+        with open(f_name, 'r') as f:
             line = [_.strip() for _ in f.readlines()]
 
         d['rama'] = line
@@ -210,7 +210,7 @@ class GetMolprobityInformation(GetInputInformation):
             except OSError:
                 logging.error("Couldn't delete molprobity.out")
 
-        with open(f_name, 'r+') as f:
+        with open(f_name, 'r') as f:
             line = [_.strip() for _ in f.readlines()]
 
         d['molprobity'] = line
@@ -230,7 +230,7 @@ class GetMolprobityInformation(GetInputInformation):
                 stdout=f,
                 cwd=self.cache)
 
-        with open(f_name, 'r+') as f:
+        with open(f_name, 'r') as f:
             line = [_.strip() for _ in f.readlines()]
 
         d['clash'] = line
@@ -251,7 +251,7 @@ class GetMolprobityInformation(GetInputInformation):
                 stdout=f,
                 cwd=self.cache)
 
-        with open(f_name, 'r+') as f:
+        with open(f_name, 'r') as f:
             line = [_.strip() for _ in f.readlines()]
 
         d['rota'] = line
@@ -262,7 +262,7 @@ class GetMolprobityInformation(GetInputInformation):
 
     def write_all_lines(self, file_handle) -> list:
         """print all lines from file to list """
-        with open(file_handle.name, 'r+') as f:
+        with open(file_handle.name, 'r') as f:
             line = [_.strip() for _ in f.readlines()]
         return line
 

@@ -427,7 +427,7 @@ class GetInputInformation(object):
         template_path = Path(Path(__file__).parent.parent.resolve(), 'templates')
         reference_filename = str(Path(template_path, 'references.csv'))
 
-        with open(reference_filename, 'r+') as f:
+        with open(reference_filename, 'r') as f:
             allref = [_.strip().split('|') for _ in f.readlines()]
 
         for line in allref:
