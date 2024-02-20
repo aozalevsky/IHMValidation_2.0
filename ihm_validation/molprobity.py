@@ -82,7 +82,7 @@ class GetMolprobityInformation(GetInputInformation):
 
         mp_core_path = Path(
             Path(mp_tool_path).parent,
-            '../../modules/molprobity/lib/core.php'
+            '../../molprobity/lib/core.php'
         )
 
         if mp_core_path.is_file():
